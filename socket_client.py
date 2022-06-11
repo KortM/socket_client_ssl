@@ -8,7 +8,7 @@ def send_file():
     host = 'host-address'
     context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
     context.load_verify_locations('cert.pem')
-    filepath = 'X:\\Технический Департамент\\Группа эксплуатации\\УЗЛЫ СЕВЕРЕНА\\БАЗА УЗЛОВ.xlsx'
+    filepath = 'path-to-file'
     toaster = ToastNotifier()
 
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM, 0) as sock:
