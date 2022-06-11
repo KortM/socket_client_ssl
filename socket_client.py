@@ -29,13 +29,15 @@ def send_file():
                     print('File not found!')
                     toaster.show_toast('Ошибка', 'Передача не может быть выполнена, \
                     т.к. файл отсутсвует или неверный путь к файлу.')
+                    ssock.close()
+                    time.sleep(120)
+                    send_file()
             except Exception as e:
                 print(f'Not connect {e}')
 
 if __name__ == '__main__':
-    '''schedule.every().day.at('18:00').do(send_file)
+    print('Запущен')
+    schedule.every().day.at('18:00').do(send_file)
     while True:
-        print('Run')
         schedule.run_pending()
-        time.sleep(1)'''
-    send_file()
+        time.sleep(1)
