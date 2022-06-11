@@ -5,7 +5,7 @@ import time
 from win10toast import ToastNotifier
 
 def send_file():
-    host = '146.120.83.122'
+    host = 'host-address'
     context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
     context.load_verify_locations('cert.pem')
     filepath = 'X:\\Технический Департамент\\Группа эксплуатации\\УЗЛЫ СЕВЕРЕНА\\БАЗА УЗЛОВ.xlsx'
